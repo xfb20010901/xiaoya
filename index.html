@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>To My Love</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 添加图标 -->
+    <link rel="shortcut icon" href="assets/images/heart-icon.png" type="image/x-icon">
+</head>
+<body>
+    <!-- 背景音乐 -->
+    <audio id="bgMusic" preload="auto" loop>
+        <source src="assets/music/love.mp3" type="audio/mpeg">
+        <source src="assets/music/love.ogg" type="audio/ogg">
+        <source src="assets/music/love.wav" type="audio/wav">
+        <p>您的浏览器不支持 HTML5 音频，请升级浏览器。</p>
+    </audio>
+
+    <!-- 音乐控制按钮 -->
+    <div class="music-control">
+        <button id="musicToggle" style="display: none;">♫</button>
+    </div>
+
+    <!-- 主要内容区 -->
+    <div class="container">
+        <div class="love-text">
+            <h1>亲爱的宝贝</h1>
+            <div class="message">
+                <p>我喜欢你的笑容</p>
+                <p>甜蜜的21天已经过去</p>
+                <p>每一天都很特别</p>
+                <p>因为有你在身边</p>
+                <p>让我们继续书写我们的故事吧</p>
+            </div>
+        </div>
+
+        <!-- 添加倒计时区域 -->
+        <div class="countdown">
+            <h3>我们已经相爱了</h3>
+            <div class="time-blocks">
+                <div class="time-block">
+                    <span id="days">21</span>
+                    <span>天</span>
+                </div>
+                <div class="time-block">
+                    <span id="hours">00</span>
+                    <span>时</span>
+                </div>
+                <div class="time-block">
+                    <span id="minutes">00</span>
+                    <span>分</span>
+                </div>
+                <div class="time-block">
+                    <span id="seconds">00</span>
+                    <span>秒</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="love-days">
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+                <div class="day-count">甜蜜的第 <span id="daysLeft">21</span> 天</div>
+            </div>
+            <div class="milestone-text">我们的爱情故事正在继续...</div>
+        </div>
+
+        <!-- 添加心愿墙 -->
+        <div class="wish-wall">
+            <h3>我们的心愿墙</h3>
+            <div class="wishes">
+                <div class="wish">一起去看海</div>
+                <div class="wish">一起看日出</div>
+                <div class="wish">一起做一顿美食</div>
+                <div class="wish">一起去旅行</div>
+                <div class="wish">一起看星星</div>
+            </div>
+        </div>
+
+        <div class="daily-message">
+            <h3>今日的甜蜜时刻</h3>
+            <p id="dailyText"></p>
+            <!-- 添加表情互动 -->
+            <div class="reactions">
+                <button class="reaction-btn" data-emoji="❤️">❤️</button>
+                <button class="reaction-btn" data-emoji="😊">😊</button>
+                <button class="reaction-btn" data-emoji="🥰">🥰</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 优化照片墙布局 -->
+    <div class="photo-wall">
+        <div class="photo-frame" style="top: 5%; left: 5%;">
+            <img src="assets/images/bj1.jpg" alt="照片1" loading="lazy">
+            <div class="photo-caption">第一次见面</div>
+        </div>
+        <div class="photo-frame" style="top: 15%; left: 75%;">
+            <img src="assets/images/bj2.jpg" alt="照片2" loading="lazy">
+            <div class="photo-caption">一起看电影</div>
+        </div>
+        <div class="photo-frame" style="top: 45%; left: 85%;">
+            <img src="assets/images/bj3.jpg" alt="照片3" loading="lazy">
+            <div class="photo-caption">公园漫步</div>
+        </div>
+        <div class="photo-frame" style="top: 65%; left: 70%;">
+            <img src="assets/images/bj4.jpg" alt="照片4" loading="lazy">
+            <div class="photo-caption">甜蜜晚餐</div>
+        </div>
+        <div class="photo-frame" style="top: 35%; left: 5%;">
+            <img src="assets/images/bj5.jpg" alt="照片5" loading="lazy">
+            <div class="photo-caption">一起逛街</div>
+        </div>
+        <div class="photo-frame" style="top: 55%; left: 15%;">
+            <img src="assets/images/bj6.jpg" alt="照片6" loading="lazy">
+            <div class="photo-caption">开心时光</div>
+        </div>
+        <div class="photo-frame" style="top: 75%; left: 25%;">
+            <img src="assets/images/bj7.jpg" alt="照片7" loading="lazy">
+            <div class="photo-caption">浪漫约会</div>
+        </div>
+        <div class="photo-frame" style="top: 25%; left: 45%;">
+            <img src="assets/images/bj8.jpg" alt="照片8" loading="lazy">
+            <div class="photo-caption">美好回忆</div>
+        </div>
+        <div class="photo-frame" style="top: 85%; left: 45%;">
+            <img src="assets/images/bj9.jpg" alt="照片9" loading="lazy">
+            <div class="photo-caption">幸福瞬间</div>
+        </div>
+    </div>
+
+    <!-- 添加加载动画 -->
+    <div class="loading-overlay">
+        <div class="loading-heart"></div>
+        <p>正在加载我们的故事...</p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
