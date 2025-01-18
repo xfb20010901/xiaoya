@@ -151,12 +151,24 @@ document.addEventListener('DOMContentLoaded', function() {
     img.onload = function() {
         console.log('背景图片加载成功');
         document.querySelector('.loading-overlay').style.display = 'none';
+        document.body.style.backgroundImage = `url('${img.src}')`;
     };
     img.onerror = function() {
         console.error('背景图片加载失败');
-        alert('背景图片加载失败，请检查图片文件路径是否正确');
+        // 加载失败时使用备用颜色
+        document.body.style.background = 'linear-gradient(145deg, #ffe6ea, #fff0f3)';
+        document.querySelector('.loading-overlay').style.display = 'none';
     };
+    // 尝试加载背景图片
     img.src = 'assets/images/bg.jpg';
+    // 设置加载超时
+    setTimeout(() => {
+        if (!img.complete) {
+            img.src = ''; // 取消当前加载
+            document.body.style.background = 'linear-gradient(145deg, #ffe6ea, #fff0f3)';
+            document.querySelector('.loading-overlay').style.display = 'none';
+        }
+    }, 5000); // 5秒超时
 
     // 初始化
     updateCountdown();
